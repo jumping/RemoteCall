@@ -5,6 +5,6 @@ scan a autoscaling group on AWS EC2 and then get all IPs of running instances, t
 
 How to run ?
 1. python hello.py
-2. access from url: http://ip:5000/api/?_call=execute&string=xmlapi-as
+2. access from url: http://ip/api/?_call=execute&string=xmlapi-as
 
 the "xmlapi-as" is the name of the autoscaling group.
