@@ -100,14 +100,14 @@ def running_ip(autoscalingname=''):
                 ips.append(r[-1][0])
     return ips
 
-def main():
-    history = []
-    running = []
+def main(autoscalingname):
+    #history = []
+    #running = []
 
     #conn = boto.connect_autoscale()
     #groups = conn.get_all_groups()
     #if DEBUG: print len(groups)
-    conn = boto.connect_elb()
+    #conn = boto.connect_elb()
     
     #actives = conn.get_all_activities('')
     #if DEBUG: print actives
@@ -129,7 +129,12 @@ def main():
     #    print "Serving list"
     #    print "----------------"
     #    for r in running:print r 
-    print running_ip()
+    print running_ip(autoscalingname)
 
 if __name__ == '__main__':
-    main()
+    from optparse import OptionParser
+    parser = OptionParser(usage="%prog [options]")
+    parser.add_option("-n", "--name", help="The name of ASG", dest="name")
+    (options, args) = parser.parse_args()
+    if options.name:
+        main(options.name)
