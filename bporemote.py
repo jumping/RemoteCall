@@ -15,7 +15,7 @@ import paramiko
 DEBUG=False
 
 def uniqify_seq(seq):
-	  set = {}
+    set = {}
     map(set.__setitem__, seq, [])
     return set.keys()
 
