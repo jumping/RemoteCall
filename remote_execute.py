@@ -7,7 +7,7 @@ import datetime
 
 
 def execute(as_name, cmdline, app):
-    hosts = autoscaling.running_ip(as_name,False)
+    hosts = autoscaling.running_ip(as_name,True)
     #hosts = ['10.244.14.224']
     now = datetime.datetime.now()
     file_handler = logging.FileHandler('/tmp/execute.log')
