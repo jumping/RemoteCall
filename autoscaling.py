@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: UTF8 -*-
 import boto
-import boto.ec2
-import boto.ec2.elb
-import boto.ec2.elb.loadbalancer
+#import boto.ec2
+#import boto.ec2.elb
+#import boto.ec2.elb.loadbalancer
 
 DEBUG = False
 #DEBUG = True
@@ -105,10 +105,12 @@ def running_ip(autoscalingname='',public=True):
     #        if r[-1]:  
     #            if DEBUG: print r
     #            ips.append(r[-1][0])
-    if public:
+    if public and public_ips:
         return public_ips
-    else:
+    elif private_ips:
         return private_ips
+    else:
+        return 
 
 def main(autoscalingname):
     #history = []
