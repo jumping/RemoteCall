@@ -1,4 +1,13 @@
 #!/bin/env python26
+# -*- coding: UTF8 -*-
+#
+#   Jumping Qu @ BPO
+#
+#vim: ts=4 sts=4 et sw=4
+#
+"""
+hello.py
+"""
 import os
 from flask import Flask
 from flask import send_from_directory

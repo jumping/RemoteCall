@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: UTF8 -*-
+#
+#   Jumping Qu @ BPO
+#
+#vim: ts=4 sts=4 et sw=4
+#
+"""
+autoscaling.py
+"""
+
 import boto
 #import boto.ec2
 #import boto.ec2.elb
