@@ -156,6 +156,10 @@ if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser(usage="%prog [options]")
     parser.add_option("-n", "--name", help="The name of ASG", dest="name")
+    parser.add_option("-p", "--private_ip", action="store_true", help="output private ip", dest="private_ip")
     (options, args) = parser.parse_args()
     if options.name:
-        main(options.name)
+        if options.private_ip:
+            print ' '.join(running_ip(options.name, False))
+        else:
+            print ' '.join(main(options.name))
