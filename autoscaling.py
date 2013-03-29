@@ -150,7 +150,7 @@ def main(autoscalingname):
     #    print "Serving list"
     #    print "----------------"
     #    for r in running:print r 
-    print running_ip(autoscalingname)
+    print ' '.join(running_ip(autoscalingname))
 
 if __name__ == '__main__':
     from optparse import OptionParser
@@ -162,4 +162,4 @@ if __name__ == '__main__':
         if options.private_ip:
             print ' '.join(running_ip(options.name, False))
         else:
-            print ' '.join(main(options.name))
+            main(options.name)
