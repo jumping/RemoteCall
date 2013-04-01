@@ -28,7 +28,7 @@ class RemoteAPI(Namespace):
   
   execute.published = True
 
-app.route('/api/', methods=['GET'])(Route(RemoteAPI, framework='flask', debug=True))
+app.route('/api/', methods=['GET'])(Route(RemoteAPI, framework='flask', debug=False))
 
 @app.route('/')
 def index():
