@@ -28,7 +28,8 @@ class Remote(object):
         self.hosts = []
         self.connections = []
 
-    def __connect(self, hname, uname='root', ssh_key='/root/bpo.pem'):
+    def __connect(self, hname, uname='root', ssh_key=os.path.join(os.getenv("HOME"),'bpo.pem')):
+    #def __connect(self, hname, uname='root', ssh_key='/root/bpo.pem'):
         """
         connect to all hosts in hosts list
         """
