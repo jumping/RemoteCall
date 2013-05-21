@@ -9,7 +9,7 @@
 remote_execute.py
 """
 
-impor tlogging
+import logging
 import bporemote
 import autoscaling
 import datetime
